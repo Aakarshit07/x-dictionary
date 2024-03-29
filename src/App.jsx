@@ -15,6 +15,8 @@ function App() {
     let result = dictionary.filter((inputword) => inputword.word.toLowerCase().includes(word.toLowerCase()))
     if(result.length > 0) {
       setWordMeaning(result[0].meaning);
+    } else {
+      setWordMeaning("Word not found in the dictionary.");
     }
   }
   else {
